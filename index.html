@@ -91,7 +91,8 @@
 
     /* Footer */
     footer { border-top:1px solid var(--border); padding:18px 0 60px; color:var(--muted); font-size:13px; text-align:center; }
-
+    footer1 { border-top:1px solid var(--border); padding:18px 0 60px; color:var(--muted); font-size:13px; text-align:right; }
+    
     /* Responsive */
     @media (max-width: 900px) {
       .cards { grid-template-columns: repeat(2, 1fr); }
@@ -213,10 +214,15 @@
 
   <footer>
     <div class="container">
-      <div>© <span id="year"></span> Ernest B. Hernandez • </div>
-      <div style="margin-top:6px;">v1.0 • Last updated: 19‑March‑2026</div>
+      <div>© <span id="year"></span> Ernest B. Hernandez</div>
     </div>
   </footer>
+
+  <footer1>
+    <div class="container">
+      <div style="margin-top:6px;">v1.0 • Last updated: 19‑March‑2026</div>
+    </div>
+  </footer1>
 
   <script>
     // Tiny helper to keep the year current
