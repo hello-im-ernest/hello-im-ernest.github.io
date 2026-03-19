@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ernest B. Hernandez | Main Hub</title>
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --sidebar-bg: #12151c;
+            --accent: #58a6ff;
+            --border: #30363d;
+            --text-main: #adbac7;
+            --text-bright: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        /* Sidebar Identity Section */
+        .sidebar {
+            width: 320px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-header h1 {
+            font-size: 1.5rem;
+            color: var(--text-bright);
+            margin-bottom: 5px;
+        }
+        .status-tag {
+            font-size: 0.8rem;
+            background: #232a35;
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            padding: 60px;
+            max-width: 900px;
+        }
+        section { margin-bottom: 40px; }
+        h2 {
+            font-size: 1.1rem;
+            color: var(--text-bright);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .spec-item {
+            background: #161b22;
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .spec-item b { color: var(--accent); display: block; margin-bottom: 5px; }
+        
+        a.nav-link {
+            color: var(--accent);
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        a.nav-link:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar { width: auto; border-right: none; border-bottom: 1px solid var(--border); }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="profile-header">
+            <h1>Ernest B. Hernandez</h1>
+            <span class="status-tag">BAT Candidate • Class of 2027</span>
+            <p>Developing secure, resilient systems at <strong>St. Philip's College</strong>.</p>
+        </div>
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 20px 0;">
+        <nav>
+            <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" class="nav-link">📂 View Portfolio</a>
+            <a href="https://linkedin.com/in/hello-im-ernest" class="nav-link">🔗 LinkedIn</a>
+            <a href="mailto:hello.im.ernest@gmail.com" class="nav-link">📧 Contact</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <section>
+            <h2>Strategic Focus</h2>
+            <p>I specialize in translating high-level security requirements into low-level technical implementations. My academic path is built on three core pillars:</p>
+            <div class="grid-list">
+                <div class="spec-item">
+                    <b>Secure System Design</b>
+                    Architecture that assumes breach and prioritizes resilience and isolation.
+                </div>
+                <div class="spec-item">
+                    <b>Applied Cryptography</b>
+                    Implementing robust encryption protocols for data-at-rest and in-transit.
+                </div>
+                <div class="spec-item">
+                    <b>Digital Forensics</b>
+                    Investigating system integrity through Autopsy, FTK Imager, and packet analysis.
+                </div>
+                <div class="spec-item">
+                    <b>Automation</b>
+                    Using Python to harden systems and streamline incident response.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Current Research & Labs</h2>
+            <p>My <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">Technical Portfolio</a> acts as a live ledger of my progression. Key areas currently being documented include:</p>
+            <ul>
+                <li><strong>Network Hardening:</strong> Implementing firewall rules and traffic analysis via Wireshark.</li>
+                <li><strong>Vulnerability Assessment:</strong> Systematic scanning and remediation using Nmap and Nessus.</li>
+                <li><strong>Governance & Compliance:</strong> Mapping technical controls to NIST and ISO frameworks.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Objective</h2>
+            <p>Seeking to leverage a background in Secure Systems Design to protect critical infrastructure, moving toward a terminal goal of <strong>Information Security Architect</strong>.</p>
+        </section>
+    </main>
+
+</body>
+</html>
