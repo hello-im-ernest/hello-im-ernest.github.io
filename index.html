@@ -6,140 +6,142 @@
     <title>Ernest B. Hernandez | Main Hub</title>
     <style>
         :root {
-            --bg: #0a0c10;
-            --sidebar-bg: #12151c;
+            --bg: #0d1117;
+            --sidebar-bg: #161b22;
             --accent: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-header: #ffffff;
             --border: #30363d;
-            --text-main: #adbac7;
-            --text-bright: #ffffff;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
             margin: 0;
             display: flex;
             min-height: 100vh;
         }
-        /* Sidebar Identity Section */
+        /* Sidebar Navigation */
         .sidebar {
-            width: 320px;
+            width: 280px;
             background-color: var(--sidebar-bg);
             border-right: 1px solid var(--border);
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
+            padding: 40px 30px;
+            position: fixed;
+            height: 100vh;
         }
-        .profile-header h1 {
-            font-size: 1.5rem;
-            color: var(--text-bright);
-            margin-bottom: 5px;
-        }
-        .status-tag {
-            font-size: 0.8rem;
-            background: #232a35;
-            color: var(--accent);
-            padding: 4px 8px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        /* Main Content Area */
-        .main-content {
-            flex-grow: 1;
-            padding: 60px;
-            max-width: 900px;
-        }
-        section { margin-bottom: 40px; }
-        h2 {
-            font-size: 1.1rem;
-            color: var(--text-bright);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .grid-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        .spec-item {
-            background: #161b22;
-            border: 1px solid var(--border);
-            padding: 15px;
-            border-radius: 6px;
-        }
-        .spec-item b { color: var(--accent); display: block; margin-bottom: 5px; }
+        .profile-section h2 { font-size: 1.4rem; color: var(--text-header); margin-bottom: 5px; }
+        .profile-section p { font-size: 0.85rem; opacity: 0.8; margin-top: 0; }
         
-        a.nav-link {
-            color: var(--accent);
+        nav ul { list-style: none; padding: 0; margin-top: 40px; }
+        nav li { margin-bottom: 15px; }
+        nav a {
             text-decoration: none;
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
+            color: var(--text-main);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
         }
-        a.nav-link:hover { text-decoration: underline; }
+        nav a:hover { color: var(--accent); }
+        nav a span { margin-right: 10px; }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px; /* Offset for sidebar */
+            padding: 60px 80px;
+            max-width: 850px;
+        }
+        section { margin-bottom: 50px; }
+        h1 { color: var(--text-header); font-size: 1.8rem; margin-bottom: 20px; }
+        h3 { 
+            color: var(--accent); 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+            letter-spacing: 1px; 
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+        .experience-item { margin-bottom: 25px; }
+        .experience-item h4 { color: var(--text-header); margin-bottom: 5px; }
+        .date { font-size: 0.85rem; opacity: 0.7; }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #21262d;
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
 
         @media (max-width: 768px) {
             body { flex-direction: column; }
-            .sidebar { width: auto; border-right: none; border-bottom: 1px solid var(--border); }
+            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); padding: 30px; }
+            .main-content { margin-left: 0; padding: 40px 30px; }
         }
     </style>
 </head>
 <body>
 
     <aside class="sidebar">
-        <div class="profile-header">
-            <h1>Ernest B. Hernandez</h1>
-            <span class="status-tag">BAT Candidate • Class of 2027</span>
-            <p>Developing secure, resilient systems at <strong>St. Philip's College</strong>.</p>
+        <div class="profile-section">
+            <h2>Ernest B. Hernandez</h2>
+            <p>Aspiring Information Security Architect</p>
         </div>
-        <hr style="border: 0; border-top: 1px solid var(--border); margin: 20px 0;">
         <nav>
-            <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" class="nav-link">📂 View Portfolio</a>
-            <a href="https://linkedin.com/in/hello-im-ernest" class="nav-link">🔗 LinkedIn</a>
-            <a href="mailto:hello.im.ernest@gmail.com" class="nav-link">📧 Contact</a>
+            <ul>
+                <li><a href="#about"><span>🏡</span> Home</a></li>
+                <li><a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/"><span>🛡️</span> Portfolio</a></li>
+                <li><a href="https://linkedin.com/in/hello-im-ernest" target="_blank"><span>💼</span> LinkedIn</a></li>
+                <li><a href="mailto:hello.im.ernest@gmail.com"><span>📧</span> Contact</a></li>
+            </ul>
         </nav>
     </aside>
 
     <main class="main-content">
-        <section>
-            <h2>Strategic Focus</h2>
-            <p>I specialize in translating high-level security requirements into low-level technical implementations. My academic path is built on three core pillars:</p>
-            <div class="grid-list">
-                <div class="spec-item">
-                    <b>Secure System Design</b>
-                    Architecture that assumes breach and prioritizes resilience and isolation.
-                </div>
-                <div class="spec-item">
-                    <b>Applied Cryptography</b>
-                    Implementing robust encryption protocols for data-at-rest and in-transit.
-                </div>
-                <div class="spec-item">
-                    <b>Digital Forensics</b>
-                    Investigating system integrity through Autopsy, FTK Imager, and packet analysis.
-                </div>
-                <div class="spec-item">
-                    <b>Automation</b>
-                    Using Python to harden systems and streamline incident response.
-                </div>
+        <section id="about">
+            <h3>Mission Objective</h3>
+            <h1>Building Secure, Resilient Systems</h1>
+            <p>
+                I am a Cybersecurity candidate at <strong>St. Philip's College (Class of 2027)</strong>. My focus lies in the intersection of architectural design and defensive engineering. I am dedicated to mastering the principles of secure-by-design systems, with specific interests in <strong>applied cryptography</strong>, <strong>forensics</strong>, and <strong>critical infrastructure protection</strong>.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h3>Academic Experience</h3>
+            <div class="experience-item">
+                <h4>BAT, Cybersecurity Candidate</h4>
+                <div class="date">St. Philip's College | 2023 — 2027 (Expected)</div>
+                <p>Concentrating on Network Security, Vulnerability Management, and Governance (GRC). Actively developing a technical foundation through intensive lab environments and project-based learning.</p>
             </div>
         </section>
 
-        <section>
-            <h2>Current Research & Labs</h2>
-            <p>My <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">Technical Portfolio</a> acts as a live ledger of my progression. Key areas currently being documented include:</p>
-            <ul>
-                <li><strong>Network Hardening:</strong> Implementing firewall rules and traffic analysis via Wireshark.</li>
-                <li><strong>Vulnerability Assessment:</strong> Systematic scanning and remediation using Nmap and Nessus.</li>
-                <li><strong>Governance & Compliance:</strong> Mapping technical controls to NIST and ISO frameworks.</li>
-            </ul>
+        <section id="skills">
+            <h3>Core Competencies</h3>
+            <div class="skills-grid">
+                <div class="skill-tag">Python Scripting</div>
+                <div class="skill-tag">Linux Hardening</div>
+                <div class="skill-tag">Digital Forensics</div>
+                <div class="skill-tag">Network Analysis</div>
+                <div class="skill-tag">NIST Framework</div>
+                <div class="skill-tag">Incident Response</div>
+            </div>
         </section>
 
-        <section>
-            <h2>Objective</h2>
-            <p>Seeking to leverage a background in Secure Systems Design to protect critical infrastructure, moving toward a terminal goal of <strong>Information Security Architect</strong>.</p>
+        <section id="focus">
+            <h3>Strategic Interests</h3>
+            <ul>
+                <li><strong>Microarchitectural Defenses:</strong> Understanding hardware-level security.</li>
+                <li><strong>Applied Cryptography:</strong> Ensuring data integrity and confidentiality in transit.</li>
+                <li><strong>Virtualization Security:</strong> Hardening hypervisors and containerized environments.</li>
+            </ul>
         </section>
     </main>
 
