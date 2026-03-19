@@ -1,282 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ernest B. Hernandez — Main Page</title>
-  <meta name="description" content="Professional site for Ernest B. Hernandez. Centralizes my academic journey at St. Philip's College and my trajectory toward Information Security Architecture." />
-  <meta name="author" content="Ernest B. Hernandez" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ernest B. Hernandez | Hub</title>
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --side-bg: #12151c;
+            --accent: #58a6ff;
+            --gold: #f2cc60;
+            --border: #30363d;
+            --text: #adbac7;
+            --header: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
 
-  <!-- Open Graph / Twitter (optional) -->
-  <meta property="og:title" content="Ernest B. Hernandez — Main Page" />
-  <meta property="og:description" content="BAT, Cybersecurity • St. Philip's College • Class of 2027. Aspiring Information Security Architect." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://eb-hernandez.github.io/" />
-  <meta property="og:image" content="https://eb-hernandez.github.io/assets/og-image.png" /> <!-- TODO: optional -->
-  <meta name="twitter:card" content="summary_large_image" />
+        /* Sidebar: Your Navigation Anchor */
+        aside {
+            width: 300px;
+            background: var(--side-bg);
+            border-right: 1px solid var(--border);
+            padding: 40px 30px;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .identity h1 { font-size: 1.4rem; color: var(--header); margin: 0; }
+        .identity p { font-size: 0.85rem; color: var(--accent); margin-top: 5px; font-weight: 500; }
+        
+        nav { margin-top: 50px; flex-grow: 1; }
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: var(--text);
+            padding: 12px 0;
+            border-bottom: 1px solid transparent;
+            transition: 0.2s;
+            font-size: 0.95rem;
+        }
+        nav a:hover { color: var(--header); border-bottom-color: var(--accent); }
+        .sidebar-footer { font-size: 0.75rem; opacity: 0.5; }
 
-  <!-- Optional favicon -->
-  <link rel="icon" href="/favicon.ico">
+        /* Main Viewport: The Hierarchy */
+        main {
+            margin-left: 300px;
+            padding: 60px 80px;
+            max-width: 800px;
+        }
+        section { margin-bottom: 60px; }
+        .label { 
+            font-family: 'Courier New', monospace; 
+            color: var(--gold); 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 15px;
+        }
+        h2 { color: var(--header); font-size: 2rem; margin-top: 0; }
+        
+        .block {
+            border-left: 2px solid var(--border);
+            padding-left: 25px;
+            margin-top: 20px;
+        }
+        .block h3 { color: var(--header); margin-bottom: 5px; }
+        .block span { font-size: 0.85rem; color: var(--accent); }
 
-  <style>
-    :root{
-      --bg: #0f1216;
-      --panel:#151a21;
-      --panel-2:#11161d;
-      --text:#e6edf3;
-      --muted:#9aa4b2;
-      --brand:#4f7cff;
-      --brand-soft: rgba(79,124,255,.12);
-      --border:#263041;
-      --good:#45d483;
-      --warn:#ffc857;
-      --shadow: 0 0 0 1px var(--border), 0 6px 20px rgba(0,0,0,.35);
-    }
-    * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill-item {
+            background: #161b22;
+            border: 1px solid var(--border);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
 
-    /* Layout */
-    .wrap {
-      display: grid;
-      grid-template-columns: 270px minmax(640px, 1fr); /* ensures main never gets too narrow */
-      min-height: 100vh;
-    }
-
-    aside {
-      position: sticky; top: 0;
-      align-self: start;
-      height: 100dvh;
-      border-right: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--panel-2), var(--panel));
-      padding: 20px 18px;
-    }
-    .brand { font-weight: 800; font-size: 18px; }
-    .tag { display:inline-block; margin-top:8px; padding:6px 10px; border:1px solid var(--border);
-      border-radius: 999px; color:var(--muted); background: #0c1117; font-size: 12px; }
-    .sidebar-note { color: var(--muted); margin: 14px 0 18px; line-height: 1.5; }
-    .side-links { margin: 14px 0 0 0; padding: 0; list-style:none; }
-    .side-links li { margin: 8px 0; }
-    .nav-link {
-      display:flex; align-items:center; gap:8px;
-      color: var(--text); padding: 8px 10px; border-radius: 8px; border: 1px solid transparent;
-    }
-    .nav-link:hover { background: var(--brand-soft); border-color: var(--border); text-decoration:none; }
-    .external { color: var(--brand); }
-
-    main { padding: 28px 28px 60px; }
-    .container { width: min(1080px, 94%); margin: 0 auto; }  /* a bit wider and more
-    
-    /* Top crumbs (for anchors) */
-    .crumbs { display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: 18px; }
-    .crumbs a {
-      padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted);
-      background: rgba(255,255,255,0.02);
-    }
-    .crumbs a:hover { color: var(--text); border-color: var(--brand); }
-
-    /* Hero heading */
-    .hero h1 { font-size: clamp(26px, 4.2vw, 40px); margin: 2px 0 4px; }
-    .hero .subtitle { color: var(--muted); margin: 0 0 6px; }
-    .hero .ribbon { display:inline-block; margin-top: 10px; padding: 6px 12px; border:1px solid var(--border);
-      border-radius: 999px; background: var(--panel); color:var(--muted); font-size: 14px; }
-
-    /* Panels & grids */
-    section { padding: 28px 0; }
-    .section-title { margin: 0 0 14px; font-size: 20px; }
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: var(--shadow);
-    }
-    .grid-2 { display:grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
-    .bullets { margin: 10px 0 0 0; color: var(--muted); }
-    .bullets li { margin: 6px 0; }
-
-    /* Cards row (Home/Labs/LinkedIn/Email) */
-    .cards { display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0; }
-    .card {
-      text-align:center; padding: 14px; border-radius: 10px; border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
-      transition: transform .15s ease, border-color .15s ease;
-    }
-    .card:hover { transform: translateY(-3px); border-color: var(--brand); }
-    .label { display:block; color:var(--muted); font-size: 13px; margin-top: 4px; }
-
-    /* CTA buttons */
-    .cta { margin-top: 12px; display:flex; flex-wrap:wrap; gap: 10px; }
-    .btn {
-      display:inline-flex; gap: 8px; align-items:center;
-      padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border);
-      background: var(--brand-soft); color: var(--text); font-weight:600;
-    }
-    .btn:hover { background: rgba(79,124,255,.18); text-decoration:none; }
-    .btn.secondary { background: transparent; }
-
-    footer { border-top: 1px solid var(--border); color: var(--muted); text-align:center; padding: 18px 0 50px; font-size: 13px; }
-    footer1 { border-top: 1px solid var(--border); color: var(--muted); text-align:right; padding: 18px 0 50px; font-size: 13px; }
-      
-    /* Mobile behavior: sidebar becomes top bar */
-    @media (max-width: 860px) {
-      .wrap { grid-template-columns: 1fr; }
-      aside {
-        position: static; height: auto; padding: 14px 16px;
-        border-right: none; border-bottom: 1px solid var(--border);
-      }
-      .sidebar-note { display: none; }
-      main { padding: 18px; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .grid-2 { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 520px) {
-      .cards { grid-template-columns: 1fr; }
-    }
-  </style>
+        @media (max-width: 900px) {
+            body { flex-direction: column; }
+            aside { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
+            main { margin-left: 0; padding: 40px 20px; }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- LEFT SIDEBAR -->
+
     <aside>
-      <div class="brand">Ernest B. Hernandez</div>
-      <span class="tag">BAT Candidate • Class of 2027</span>
-
-      <p class="sidebar-note">
-        Developing secure, resilient systems at <strong>St. Philip's College</strong>.<br>
-        Focused on secure architecture and threat‑informed design.
-      </p>
-
-      <ul class="side-links">
-        <li><a class="nav-link external" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" target="_self">📁 View Portfolio</a></li>
-        <li><a class="nav-link external" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">🔗 LinkedIn</a></li>
-        <li><a class="nav-link" href="#contact">✉️ Contact</a></li>
-      </ul>
+        <div class="identity">
+            <h1>Ernest B. Hernandez</h1>
+            <p>Secure Systems Designer</p>
+            <div style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">
+                BAT Cybersecurity Candidate<br>
+                St. Philip's College | 2027
+            </div>
+        </div>
+        <nav>
+            <a href="#mission">_01. MISSION</a>
+            <a href="#experience">_02. EXPERIENCE</a>
+            <a href="#skills">_03. COMPETENCIES</a>
+            <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">_04. PORTFOLIO</a>
+        </nav>
+        <div class="sidebar-footer">
+            v1.1 | San Antonio, TX
+        </div>
     </aside>
 
-    <!-- MAIN CONTENT -->
     <main>
-      <div class="container">
-        <!-- Top crumbs (quick anchors) -->
-        <nav class="crumbs" aria-label="Section navigation">
-          <a href="#about">About</a>
-          <a href="#highlights">Highlights</a>
-          <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">Portfolio</a>
-          <a href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">LinkedIn</a>
-        </nav>
-
-        <!-- HERO -->
-        <section class="hero" id="home" aria-label="Intro">
-          <h1>Aspiring Information Security Architect</h1>
-          <p class="subtitle">BAT, Cybersecurity • St. Philip's College • Class of 2027</p>
-          <span class="ribbon">Secure Systems Designer • Network &amp; Platform Hardening • Threat‑informed Design</span>
-
-          <!-- Quick cards -->
-          <div class="cards" aria-label="Quick navigation">
-            <a href="#about">
-              <div class="card">
-                <div>🏡 <strong>Home</strong></div>
-                <span class="label">About Me</span>
-              </div>
-            </a>
-            <a href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">
-              <div class="card">
-                <div>🛡️ <strong>Labs &amp; Projects</strong></div>
-                <span class="label">Portfolio</span>
-              </div>
-            </a>
-            <a href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">
-              <div class="card">
-                <div>💼 <strong>Let's Connect</strong></div>
-                <span class="label">LinkedIn</span>
-              </div>
-            </a>
-            <a href="mailto:hello.im.ernest@gmail.com">
-              <div class="card">
-                <div>📧 <strong>Contact Me</strong></div>
-                <span class="label">Email</span>
-              </div>
-            </a>
-          </div>
+        <section id="mission">
+            <span class="label">Primary Objective</span>
+            <h2>Building Resilient Architectures</h2>
+            <p>Bridging the gap between low-level system integrity and high-level enterprise security. Focused on <b>applied cryptography</b> and <b>critical infrastructure hardening</b>.</p>
         </section>
 
-        <!-- ABOUT -->
-        <section id="about" aria-labelledby="about-title">
-          <h2 class="section-title" id="about-title">About</h2>
-          <div class="panel grid-2">
-            <div>
-              <p>
-                I'm Ernest — a cybersecurity student focused on <strong>secure architecture</strong>, <strong>network security</strong>, and <strong>defensive engineering</strong>.<br>
-                I use hands‑on labs and projects to build toward a role in <strong>Information Security Architecture</strong>, emphasizing threat modeling, least privilege, and repeatable, testable controls.
-              </p>
-              <ul class="bullets">
-                <li>Interests: Security architecture patterns, Zero Trust, secure SDLC, and platform hardening</li>
-                <li>Current stack: Python, Kali Linux, Bash, JavaScript, network security tooling</li>
-                <li>Clubs &amp; service: Cyber Tigers • Community volunteering</li>
-              </ul>
-
-              <div class="cta" role="group" aria-label="Primary calls to action">
-                <a class="btn" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">🛡️ View Cybersecurity Portfolio</a>
-                <a class="btn" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">💼 Connect on LinkedIn</a>
-                <a class="btn secondary" href="mailto:hello.im.ernest@gmail.com">📧 Email</a>
-              </div>
-              <p class="bullets" style="margin-top:8px;">Prefer a quick summary? See highlights below.</p>
+        <section id="experience">
+            <span class="label">Academic Foundation</span>
+            <div class="block">
+                <h3>BAT, Cybersecurity</h3>
+                <span>St. Philip's College | 2023 — 2027</span>
+                <p>Concentrating on Digital Forensics, Network Hardening, and GRC frameworks. Applying theory through rigorous, hands-on lab environments.</p>
             </div>
-
-            <div class="panel" style="background: transparent;">
-              <h3 style="margin-top:0;">Skills &amp; Tools</h3>
-              <p class="bullets" style="margin:0 0 6px; color:var(--muted);">Primary:</p>
-              <p>Python • Kali Linux • Bash • Network Security • JavaScript</p>
-              <p class="bullets" style="margin:8px 0 6px; color:var(--muted);">Also exploring:</p>
-              <p>OWASP • Nmap • Wireshark • Infrastructure as Code fundamentals</p>
-            </div>
-          </div>
         </section>
 
-        <!-- HIGHLIGHTS -->
-        <section id="highlights" aria-labelledby="highlights-title">
-          <h2 class="section-title" id="highlights-title">Highlights</h2>
-          <div class="panel">
-            <ul class="bullets" style="margin:0;">
-              <li>Building a curated <strong>Cybersecurity Portfolio</strong> documenting hands‑on labs and secure‑architecture exercises.</li>
-              <li>Progression from <em>foundational</em> design principles to <em>specialized</em> controls and validation.</li>
-              <li>Clear storytelling for each project: objective → approach → controls → evidence → next steps.</li>
-            </ul>
-            <div class="cta">
-              <a class="btn" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">Explore Portfolio</a>
-              <a class="btn secondary" href="#" title="Replace with your PDF link">View Resume (PDF)</a> <!-- TODO: replace with /assets/Ernest_Hernandez_Resume.pdf -->
+        <section id="skills">
+            <span class="label">System Capabilities</span>
+            <div class="skills-grid">
+                <div class="skill-item"><b>OS:</b> Linux (Kali/Ubuntu/RedHat)</div>
+                <div class="skill-item"><b>Automation:</b> Python Scripting</div>
+                <div class="skill-item"><b>Network:</b> Wireshark & Nmap</div>
+                <div class="skill-item"><b>Frameworks:</b> NIST CSF & GRC</div>
+                <div class="skill-item"><b>Forensics:</b> Autopsy & FTK</div>
+                <div class="skill-item"><b>Specialty:</b> Applied Crypto</div>
             </div>
-          </div>
         </section>
 
-        <!-- CONTACT -->
-        <section id="contact" aria-labelledby="contact-title">
-          <h2 class="section-title" id="contact-title">Contact</h2>
-          <div class="panel">
-            <p>Open to internship and junior security roles focused on secure architecture, platform hardening, or defensive engineering.</p>
-            <div class="cta">
-              <a class="btn" href="mailto:hello.im.ernest@gmail.com">📧 hello.im.ernest@gmail.com</a>
-              <a class="btn secondary" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">💼 LinkedIn</a>
-            </div>
-          </div>
+        <section id="focus">
+            <span class="label">Research Path</span>
+            <p>Investigating <strong>microarchitectural attack vectors</strong> and <strong>zero-trust implementation</strong> within virtualized environments.</p>
         </section>
-
-        <footer>
-          <div>© <span id="year"></span> Ernest B. Hernandez</div>
-        </footer>
-
-        <footer1>
-          <div style="margin-top:6px;">v1.0 • Last updated: 19‑March‑2026</div>      
-        </footer1>
-          
-      </div>
     </main>
-  </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
