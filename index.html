@@ -40,7 +40,12 @@
     a:hover { text-decoration: underline; }
 
     /* Layout */
-    .wrap { display: grid; grid-template-columns: 270px 1fr; min-height: 100vh; }
+    .wrap {
+      display: grid;
+      grid-template-columns: 270px minmax(640px, 1fr); /* ensures main never gets too narrow */
+      min-height: 100vh;
+    }
+
     aside {
       position: sticky; top: 0;
       align-self: start;
@@ -63,8 +68,8 @@
     .external { color: var(--brand); }
 
     main { padding: 28px 28px 60px; }
-    .container { width: min(1050px, 96%); margin: 0 auto; }
-
+    .container { width: min(1080px, 94%); margin: 0 auto; }  /* a bit wider and more
+    
     /* Top crumbs (for anchors) */
     .crumbs { display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: 18px; }
     .crumbs a {
@@ -117,7 +122,7 @@
     footer1 { border-top: 1px solid var(--border); color: var(--muted); text-align:right; padding: 18px 0 50px; font-size: 13px; }
       
     /* Mobile behavior: sidebar becomes top bar */
-    @media (max-width: 980px) {
+    @media (max-width: 860px) {
       .wrap { grid-template-columns: 1fr; }
       aside {
         position: static; height: auto; padding: 14px 16px;
