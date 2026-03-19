@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,12 @@
   <meta name="description" content="Professional site for Ernest B. Hernandez. Centralizes my academic journey at St. Philip's College and my trajectory toward Information Security Architecture." />
   <meta name="author" content="Ernest B. Hernandez" />
 
-  <!-- Open Graph / Twitter (optional but recommended) -->
+  <!-- Open Graph / Twitter (optional) -->
   <meta property="og:title" content="Ernest B. Hernandez — Main Page" />
   <meta property="og:description" content="BAT, Cybersecurity • St. Philip's College • Class of 2027. Aspiring Information Security Architect." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eb-hernandez.github.io/" />
-  <meta property="og:image" content="https://eb-hernandez.github.io/assets/og-image.png" /> <!-- TODO: replace or remove -->
+  <meta property="og:image" content="https://eb-hernandez.github.io/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Optional favicon -->
@@ -33,16 +34,16 @@
       --shadow: 0 0 0 1px var(--border);
 
       /* LAYOUT SCALES */
-      --sidebar-w: 240px;                  /* sidebar width */
-      --container-max: 1024px;             /* content max width */
-      --main-min: 660px;                   /* don't let main get narrower than this on desktop */
+      --sidebar-w: 240px;        /* sidebar width */
+      --container-max: 1024px;   /* content max width */
+      --main-min: 660px;         /* min width for main column on desktop */
       --radius: 10px;
       --pad: 14px;
     }
 
     * { box-sizing: border-box; }
     html, body {
-      margin:0; padding:0; background:var(--bg); color:var(--text);
+      margin:0; padding:0; background:var(--bg); color: var(--text);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
     }
@@ -103,7 +104,7 @@
     .bullets { margin: 10px 0 0 0; color: var(--muted); }
     .bullets li { margin: 6px 0; }
 
-    /* Quick navigation (replaces busy cards) */
+    /* Quick navigation */
     .quick-nav {
       display: grid;
       grid-template-columns: repeat(2, minmax(220px, 1fr));
@@ -119,7 +120,7 @@
     .qbtn span { font-weight: 500; color: var(--muted); font-size: 13px; }
     .qbtn:hover { transform: translateY(-1px); border-color: var(--brand); background: var(--brand-soft); text-decoration:none; }
 
-    /* CTAs */
+    /* CTA buttons */
     .cta { margin-top: 10px; display:flex; flex-wrap:wrap; gap: 8px; }
     .btn {
       display:inline-flex; gap:8px; align-items:center;
@@ -131,7 +132,8 @@
 
     /* Footer */
     footer { border-top: 1px solid var(--border); color: var(--muted); text-align:center; padding: 16px 0 36px; font-size: 13px; }
-
+    footer1 { border-top: 1px solid var(--border); color: var(--muted); text-align:right; padding: 16px 0 36px; font-size: 13px; }
+    
     /* ===== RESPONSIVE ===== */
     @media (max-width: 860px) {
       .wrap { grid-template-columns: 1fr; }
@@ -146,6 +148,9 @@
     @media (max-width: 520px) {
       .hero h1 { font-size: 22px; }
     }
+
+    /* Active state for sidebar links (used by tiny JS below) */
+    .nav-link.active { background: var(--brand-soft); border-color: var(--border); color: var(--text); }
   </style>
 </head>
 <body>
@@ -156,13 +161,13 @@
       <span class="tag">BAT Candidate • Class of 2027</span>
 
       <p class="sidebar-note">
-        Developing secure, resilient systems at <strong>St. Philip's College</strong>.<br>
+        Developing secure, resilient systems at <strong>St. Philip's College</strong>.<br />
         Focused on secure architecture and threat‑informed design.
       </p>
 
       <ul class="side-links">
         <li><a class="nav-link" href="#home">🏠 Home</a></li>
-        <li><a class="nav-link" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/">📁 View Portfolio</a></li>
+        <li><a class="nav-link" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" target="_blank" rel="noopener">📁 View Portfolio</a></li>
         <li><a class="nav-link" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">🔗 LinkedIn</a></li>
         <li><a class="nav-link" href="#contact">✉️ Contact</a></li>
       </ul>
@@ -175,4 +180,112 @@
         <section class="hero" id="home" aria-label="Intro">
           <h1>Aspiring Information Security Architect</h1>
           <p class="subtitle">BAT, Cybersecurity • St. Philip's College • Class of 2027</p>
-          <span class="ribbon">Secure Systems Designer • Network
+          <span class="ribbon">Secure Systems Designer • Network &amp; Platform Hardening • Threat‑informed Design</span>
+
+          <!-- Quick Navigation -->
+          <div class="quick-nav" aria-label="Quick navigation">
+            <a class="qbtn" href="#about">🏡 <strong>Home</strong> <span>About Me</span></a>
+            <a class="qbtn" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" target="_blank" rel="noopener">🛡️ <strong>Labs &amp; Projects</strong> <span>Portfolio</span></a>
+            <a class="qbtn" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">💼 <strong>Let's Connect</strong> <span>LinkedIn</span></a>
+            <a class="qbtn" href="mailto:hello.im.ernest@gmail.com">📧 <strong>Contact Me</strong> <span>Email</span></a>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" aria-labelledby="about-title">
+          <h2 class="section-title" id="about-title">About</h2>
+          <div class="panel grid-2">
+            <div>
+              <p>
+                I'm Ernest — a cybersecurity student focused on <strong>secure architecture</strong>, <strong>network security</strong>, and <strong>defensive engineering</strong>.
+                I use hands‑on labs and projects to build toward a role in <strong>Information Security Architecture</strong>, emphasizing threat modeling, least privilege, and repeatable, testable controls.
+              </p>
+              <ul class="bullets">
+                <li>Interests: Security architecture patterns, Zero Trust, secure SDLC, and platform hardening</li>
+                <li>Current stack: Python, Kali Linux, Bash, JavaScript, network security tooling</li>
+                <li>Clubs &amp; service: Cyber Tigers • Community volunteering</li>
+              </ul>
+
+              <div class="cta" role="group" aria-label="Primary calls to action">
+                <a class="btn" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" target="_blank" rel="noopener">🛡️ View Cybersecurity Portfolio</a>
+                <a class="btn secondary" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">💼 Connect on LinkedIn</a>
+                <a class="btn secondary" href="mailto:hello.im.ernest@gmail.com">📧 Email</a>
+              </div>
+
+              <p class="bullets" style="margin-top:8px;">Prefer a quick summary? See highlights below.</p>
+            </div>
+
+            <div class="panel" style="background: transparent;">
+              <h3 style="margin-top:0;">Skills &amp; Tools</h3>
+              <p class="bullets" style="margin:0 0 6px; color:var(--muted);">Primary:</p>
+              <p>Python • Kali Linux • Bash • Network Security • JavaScript</p>
+              <p class="bullets" style="margin:8px 0 6px; color:var(--muted);">Also exploring:</p>
+              <p>OWASP • Nmap • Wireshark • Infrastructure as Code fundamentals</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- HIGHLIGHTS -->
+        <section id="highlights" aria-labelledby="highlights-title">
+          <h2 class="section-title" id="highlights-title">Highlights</h2>
+          <div class="panel">
+            <ul class="bullets" style="margin:0;">
+              <li>Building a curated <strong>Cybersecurity Portfolio</strong> documenting hands‑on labs and secure‑architecture exercises.</li>
+              <li>Progression from <em>foundational</em> design principles to <em>specialized</em> controls and validation.</li>
+              <li>Clear storytelling for each project: objective → approach → controls → evidence → next steps.</li>
+            </ul>
+            <div class="cta">
+              <a class="btn" href="https://eb-hernandez.github.io/earnest-bits-n-bytes/" target="_blank" rel="noopener">Explore Portfolio</a>
+              <a class="btn secondary" href="/assets/Ernest_Hernandez_Resume.pdf" target="_blank" rel="noopener">View Resume (PDF)</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 class="section-title" id="contact-title">Contact</h2>
+          <div class="panel">
+            <p>Open to internships and junior security roles focused on secure architecture, platform hardening, or defensive engineering.</p>
+            <div class="cta">
+              <a class="btn" href="mailto:hello.im.ernest@gmail.com">📧 Email/a>
+              <a class="btn secondary" href="https://linkedin.com/in/hello-im-ernest" target="_blank" rel="noopener">💼 LinkedIn</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+          <div>© <span id="year"></span> Ernest B. Hernandez</div>
+        </footer>
+        <footer1>
+          <div style="margin-top:6px;">v1.1 • Last updated: 19‑March‑2026</div>
+        </footer1>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // Keep year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Highlight the active sidebar link (optional polish)
+    const sections = ['home','about','highlights','contact'].map(id => document.getElementById(id));
+    const sideLinks = {
+      home: document.querySelector('a[href="#home"]'),
+      about: document.querySelector('a[href="#about"]'),
+      highlights: document.querySelector('a[href="#highlights"]'),
+      contact: document.querySelector('a[href="#contact"]')
+    };
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          Object.values(sideLinks).forEach(a => a && a.classList.remove('active'));
+          const link = sideLinks[e.target.id];
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
+    sections.forEach(s => s && io.observe(s));
+  </script>
+</body>
+</html>
