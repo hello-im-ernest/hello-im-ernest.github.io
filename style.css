@@ -419,15 +419,39 @@ h2 {
 }
 .footer-container {
   display: flex;
-  justify-content: space-between; /* Pushes items to left, center, and right */
-  align-items: center;           /* Vertically centers them */
-  padding: 10px 20px;
-  font-family: monospace;        /* Matches your 'footer-mono' intent */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-family: monospace;
 }
 
-.footer-left { flex: 1; text-align: left; }
-.footer-center { flex: 1; text-align: center; }
-.footer-right { flex: 1; text-align: right; color: var(--border); }
+/* Common style for all footer text */
+.footer-container sub {
+  font-size: 0.8rem;
+}
+
+/* Left: Gray to match your header nav links */
+.footer-version {
+  flex: 1;
+  text-align: left;
+  color: #888888; /* Standard muted gray */
+}
+
+/* Center: White */
+.footer-copyright {
+  flex: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Right: Royal Blue to match "hello-im-ernest" header */
+.footer-link {
+  flex: 1;
+  text-align: right;
+  /* This is a standard Royal Blue; adjust hex if yours is specific */
+  color: #4a90e2; 
+  font-weight: 500;
+}
 
 /* ─── BADGE STRIP ────────────────────────────────────── */
 .badge-strip {
