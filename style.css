@@ -1,19 +1,19 @@
 /* ─── TOKENS ─────────────────────────────────────────── */
 :root {
-  --bg:         #0a0d11;
-  --surface:    #0f1318;
-  --surface-2:  #161b22;
-  --border:     #21262d;
+  --bg:          #0a0d11;
+  --surface:     #0f1318;
+  --surface-2:   #161b22;
+  --border:      #21262d;
   --border-glow: rgba(33, 139, 255, 0.25);
-  --text:       #e6edf3;
-  --muted:      #7d8590;
-  --accent:     #218bff;
-  --accent-2:   #3fb950;
-  --accent-3:   #e3b341;
-  --accent-4:   #ff7b72;
-  --mono:       'Ubuntu Sans Mono', monospace;
-  --display:    'Fjalla One', sans-serif;
-  --body:       'Karla', sans-serif;
+  --text:        #e6edf3;
+  --muted:       #7d8590;
+  --accent:      #218bff;
+  --accent-2:    #3fb950;
+  --accent-3:    #e3b341;
+  --accent-4:    #ff7b72;
+  --mono:        'Ubuntu Sans Mono', monospace;
+  --display:     'Fjalla One', sans-serif;
+  --body:        'Karla', sans-serif;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
@@ -417,39 +417,44 @@ h2 {
   font-size: .73rem;
   color: var(--muted);
 }
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 48px 0;
+  background: var(--bg);
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  font-family: monospace;
+  width: 100%;
 }
 
-/* Common style for all footer text */
 .footer-container sub {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
 }
 
-/* Left: Gray to match your header nav links */
+/* Force standard header-matching colors */
 .footer-version {
   flex: 1;
   text-align: left;
-  color: #888888; /* Standard muted gray */
+  color: var(--muted) !important;
 }
 
-/* Center: White */
 .footer-copyright {
   flex: 1;
   text-align: center;
-  color: #ffffff;
+  color: var(--text) !important;
 }
 
-/* Right: Royal Blue to match "hello-im-ernest" header */
 .footer-link {
   flex: 1;
   text-align: right;
-  /* This is a standard Royal Blue; adjust hex if yours is specific */
-  color: #4a90e2; 
+  color: var(--accent) !important;
   font-weight: 500;
 }
 
@@ -482,21 +487,6 @@ h2 {
 .badge-netsec    { background: #16a34a; }
 .badge-bash      { background: #1e293b; border: 1px solid var(--border); }
 
-/* ─── FOOTER ─────────────────────────────────────────── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 32px 0;
-}
-footer .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.footer-mono {
-  font-family: var(--mono);
-  font-size: .75rem;
-  color: var(--muted);
-}
-
 /* ─── DIVIDER ────────────────────────────────────────── */
 .hex-divider {
   display: flex;
@@ -521,11 +511,11 @@ footer .container {
 }
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50%        { opacity: 0; }
+  50%         { opacity: 0; }
 }
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 6px var(--accent-2); }
-  50%        { box-shadow: 0 0 14px var(--accent-2); }
+  50%         { box-shadow: 0 0 14px var(--accent-2); }
 }
 
 /* ─── SCROLL REVEAL ──────────────────────────────────── */
@@ -548,5 +538,13 @@ footer .container {
   .hero-photo-wrap { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .hero-actions { justify-content: center; }
-  footer .container { flex-direction: column; text-align: center; }
-}  
+  
+  .footer-container { 
+    flex-direction: column; 
+    text-align: center; 
+    gap: 12px;
+  }
+  .footer-version, .footer-copyright, .footer-link {
+    text-align: center;
+  }
+}
