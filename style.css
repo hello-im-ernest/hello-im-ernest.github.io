@@ -1,3 +1,31 @@
+/* ─── FONTS ─────────────────────────────────────────── */
+/* victor-mono-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Victor Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/victor-mono-v5-latin-regular.woff2') format('woff2'), url('./assets/victor-mono-v5-latin-regular.ttf') format('truetype'); 
+}
+
+/* russo-one-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/russo-one-v18-latin-regular.woff2') format('woff2'), url('./assets/russo-one-v18-latin-regular.ttf') format('truetype');
+}
+
+/* noto-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/noto-sans-v42-latin-regular.woff2') format('woff2'), url('./assets/noto-sans-v42-latin-regular.ttf') format('truetype');
+}
+
 /* ─── TOKENS ─────────────────────────────────────────── */
 :root {
   --bg:          #0a0d11;
