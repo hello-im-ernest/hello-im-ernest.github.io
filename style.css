@@ -11,9 +11,9 @@
   --accent-2:    #3fb950;
   --accent-3:    #e3b341;
   --accent-4:    #ff7b72;
-  --mono:        'Share Tech', monospace;
-  --display:     'Russo One', sans-serif;
-  --body:        'Sansation', sans-serif;
+  --mono:        'Share Tech';
+  --display:     'Russo One';
+  --body:        'Sansation';
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
