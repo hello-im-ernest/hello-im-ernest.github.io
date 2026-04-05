@@ -11,9 +11,9 @@
   --accent-2:    #3fb950;
   --accent-3:    #e3b341;
   --accent-4:    #ff7b72;
-  --mono:        'Ubuntu Sans Mono', monospace;
-  --display:     'Cinzel Decorative', serif;
-  --body:        'Proza Libre';
+  --mono:        'Syne Mono', monospace;
+  --display:     'Coda';
+  --body:        'Sansation', sans-serif;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
