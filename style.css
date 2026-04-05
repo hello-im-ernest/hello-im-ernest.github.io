@@ -421,7 +421,7 @@ h2 {
 /* ─── FOOTER ─────────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--border);
-  padding: 48px 0;
+  padding: 8px 8px;
   background: var(--bg);
 }
 
