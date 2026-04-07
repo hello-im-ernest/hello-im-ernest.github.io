@@ -158,6 +158,7 @@ nav .container {
   line-height: 1.08;
   letter-spacing: .03em;
   margin-bottom: 16px;
+  color: var(--accent-3); /* Added Gold */
   opacity: 0;
   animation: fadeUp .6s .2s forwards;
 }
@@ -319,7 +320,7 @@ h2 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--text);
+  color: var(--accent-3); /* Changed from var(--text) */
 }
 .about-card p, .about-card li {
   font-size: .9rem;
@@ -368,7 +369,7 @@ h2 {
 .skill-name {
   font-family: var(--mono);
   font-size: .82rem;
-  color: var(--accent);
+  color: var(--accent-3); /* Changed from var(--accent) */
   letter-spacing: .04em;
 }
 .skill-tags {
@@ -437,7 +438,7 @@ h2 {
   font-family: var(--display);
   font-size: .95rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-3); /* Changed from var(--accent) */
   margin-bottom: 4px;
 }
 .dir-sub {
