@@ -221,15 +221,19 @@ nav .container {
   transition: all .2s;
   text-decoration: none !important;
 }
+.btn:hover {
+  transform: translateY(-4px) !important;
+}
 .btn-primary {
   background: var(--accent);
   color: #fff;
   border: 1px solid var(--accent);
 }
 .btn-primary:hover {
-  background: var(--accent); /* Removed hardcoded #388bfd */
+  background: var(--accent);
   box-shadow: 0 0 18px rgba(33,139,255,.4);
-  filter: brightness(1.1); /* Adds a subtle lift without changing the base blue */
+  filter: brightness(1.1);
+  border-color: var(--accent); /* Added for prominent blue border */
 }
 .btn-ghost {
   background: transparent;
@@ -240,6 +244,7 @@ nav .container {
   border-color: var(--accent);
   color: var(--accent);
   box-shadow: 0 0 12px rgba(33,139,255,.15);
+  transform: translateY(-4px) !important; /* Added for consistency */
 }
 
 /* ─── HEADSHOT ────────────────────────────────────────── */
@@ -309,9 +314,9 @@ h2 {
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 .about-card:hover {
-  border-color: rgba(33, 139, 255, 0.25); /* Subtle Blue Border */
+  border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
   box-shadow: 0 8px 28px rgba(33, 139, 255, 0.12); /* Soft Blue Glow */
-  transform: translateY(-4px); /* The "Pop Up" lift */
+  transform: translateY(-4px) !important; /* The "Pop Up" lift */
   text-decoration: none !important;
 }
 .about-card-icon {
@@ -357,9 +362,9 @@ h2 {
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 .skill-card:hover {
-  border-color: rgba(33, 139, 255, 0.25); /* Subtle Blue Border */
+  border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
   box-shadow: 0 8px 28px rgba(33, 139, 255, 0.12); /* Soft Blue Glow */
-  transform: translateY(-4px); /* The "Pop Up" lift */
+  transform: translateY(-4px) !important; /* The "Pop Up" lift */
   text-decoration: none !important;
 }
 .skill-card-head {
@@ -412,9 +417,9 @@ h2 {
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 .interest-pill:hover {
-  border-color: rgba(33, 139, 255, 0.25); /* Subtle Blue Border */
+  border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
   box-shadow: 0 8px 28px rgba(33, 139, 255, 0.12); /* Soft Blue Glow */
-  transform: translateY(-4px); /* The "Pop Up" lift */
+  transform: translateY(-4px) !important; /* The "Pop Up" lift */
   text-decoration: none !important;
 }
 
@@ -436,9 +441,9 @@ h2 {
   display: block;
 }
 .dir-card:hover {
-  border-color: var(--border-glow);
-  box-shadow: 0 8px 28px rgba(33,139,255,.08);
-  transform: translateY(-3px);
+  border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
+  box-shadow: 0 8px 28px rgba(33, 139, 255, 0.25);
+  transform: translateY(-4px) !important;
 }
 .dir-icon { font-size: 1.6rem; margin-bottom: 10px; }
 .dir-title {
