@@ -242,6 +242,16 @@ nav .container {
   box-shadow: 0 0 12px rgba(33,139,255,.15);
   transform: translateY(-4px) !important;
 }
+.btn-ghost img {
+  width: 26px !important; /* Bumped from 20px */
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.btn-ghost:hover img {
+  transform: scale(1.1); /* Adds a little "pop" on hover */
+}
 
 /* ─── HEADSHOT ────────────────────────────────────────── */
 .hero-photo-wrap {
@@ -383,6 +393,10 @@ h2 {
   width: 24px;
   height: 24px;
   filter: brightness(1.2) saturate(0.8);    /* Gives the icons a slight 'cool' metallic tint */
+}
+img[alt="Linux"], 
+img[alt="Cybersecurity"] {
+  filter: brightness(1.8) drop-shadow(0 0 5px var(--accent));
 }
 .skill-name {
   font-family: var(--body);
@@ -566,12 +580,13 @@ footer {
   filter: brightness(1.2);
   transform: scale(1.1);
 }  
-.badge-python:hover   { border-color: #3572A5; color: #fff; box-shadow: 0 0 12px rgba(53, 114, 165, 0.3); }
-.badge-linux:hover    { border-color: #e8a202; color: #fff; box-shadow: 0 0 12px rgba(232, 162, 2, 0.3); }
-.badge-cybersec:hover { border-color: var(--accent); color: #fff; box-shadow: 0 0 12px rgba(33, 139, 255, 0.3); }
-.badge-js:hover       { border-color: #f0db4f; color: #fff; box-shadow: 0 0 12px rgba(240, 219, 79, 0.3); }
-.badge-netsec:hover   { border-color: #16a34a; color: #fff; box-shadow: 0 0 12px rgba(22, 163, 74, 0.3); }
-.badge-bash:hover     { border-color: var(--muted); color: #fff; box-shadow: 0 0 12px rgba(161, 170, 181, 0.3); }
+
+.badge-python   { border-color: #3572A5; color: #fff; background: rgba(53, 114, 165, 0.1); }
+.badge-linux    { border-color: #e8a202; color: #fff; background: rgba(232, 162, 2, 0.1); }
+.badge-cybersec { border-color: var(--accent); color: #fff; background: rgba(33, 139, 255, 0.1); }
+.badge-js       { border-color: #f0db4f; color: #fff; background: rgba(240, 219, 79, 0.1); }
+.badge-netsec   { border-color: #16a34a; color: #fff; background: rgba(22, 163, 74, 0.1); }
+.badge-bash     { border-color: var(--muted); color: #fff; background: rgba(161, 170, 181, 0.1); }
 
 /* ─── DIVIDER ────────────────────────────────────────── */
 .hex-divider {
