@@ -378,6 +378,10 @@ h2 {
 }
 .skill-icon {
   font-size: 1.2rem;
+.skill-svg-icon {     /* Styles the new SVG icons inside skill cards */
+  width: 24px;
+  height: 24px;
+  filter: brightness(1.2) saturate(0.8);    /* Gives the icons a slight 'cool' metallic tint */
 }
 .skill-name {
   font-family: var(--body);
@@ -548,14 +552,25 @@ footer {
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: #fff;
+  background: var(--surface-2); 
+  border: 1px solid var(--border);
+  color: var(--muted); 
+  transition: all 0.3s ease;
 }
-.badge-python    { background: #3572A5; }
-.badge-linux     { background: #e8a202; color: #000; }
-.badge-cybersec  { background: #2563eb; }
-.badge-js        { background: #f0db4f; color: #000; }
-.badge-netsec    { background: #16a34a; }
-.badge-bash      { background: #1e293b; border: 1px solid var(--border); }
+.gh-badge img {    /* Aligns icons within badges */
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.gh-badge:hover img {
+  filter: brightness(1.2);
+  transform: scale(1.1);
+}  
+.badge-python:hover   { border-color: #3572A5; color: #fff; box-shadow: 0 0 12px rgba(53, 114, 165, 0.3); }
+.badge-linux:hover    { border-color: #e8a202; color: #fff; box-shadow: 0 0 12px rgba(232, 162, 2, 0.3); }
+.badge-cybersec:hover { border-color: var(--accent); color: #fff; box-shadow: 0 0 12px rgba(33, 139, 255, 0.3); }
+.badge-js:hover       { border-color: #f0db4f; color: #fff; box-shadow: 0 0 12px rgba(240, 219, 79, 0.3); }
+.badge-netsec:hover   { border-color: #16a34a; color: #fff; box-shadow: 0 0 12px rgba(22, 163, 74, 0.3); }
+.badge-bash:hover     { border-color: var(--muted); color: #fff; box-shadow: 0 0 12px rgba(161, 170, 181, 0.3); }
 
 /* ─── DIVIDER ────────────────────────────────────────── */
 .hex-divider {
