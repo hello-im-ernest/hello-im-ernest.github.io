@@ -145,7 +145,7 @@ nav .container {
 }
 .hero-label {
   font-family: var(--body);
-  font-size: .78rem;
+  font-size: .92rem;
   color: var(--accent); /* Unified Blue */
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -191,7 +191,7 @@ nav .container {
   border-radius: 6px;
   padding: 6px 14px;
   font-family: var(--body);
-  font-size: .78rem;
+  font-size: .92rem;
   color: var(--muted);
   margin-bottom: 40px;
   opacity: 0;
