@@ -36,7 +36,7 @@
   --text:        #e1e7ef; /* Polished Chrome (Bright, crisp, metallic) */
   --muted:       #a1aab5; /* Light Steel (Highly readable mid-tone) */
   --accent:      #218bff;
-  --accent-2:    #01407a;
+  --accent-2:    #0c2e61;
   --accent-3:    #e3b341; /* Keeping your vibrant gold from the screenshot */
   --accent-4:    #ff7b72;
   --mono:        'Victor Mono';
@@ -222,7 +222,7 @@ nav .container {
 }
 .btn-primary {
   background: var(--accent-2);
-  color: #fff;
+  color: var(--muted);
   border: 1px solid var(--accent);
 }
 .btn-primary:hover {
