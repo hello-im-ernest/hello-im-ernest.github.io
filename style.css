@@ -378,6 +378,7 @@ h2 {
 }
 .skill-icon {
   font-size: 1.2rem;
+}  
 .skill-svg-icon {     /* Styles the new SVG icons inside skill cards */
   width: 24px;
   height: 24px;
