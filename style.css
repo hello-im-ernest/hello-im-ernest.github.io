@@ -523,8 +523,9 @@ footer {
 /* ─── BADGE STRIP ────────────────────────────────────── */
 .badge-strip {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center; /* This centers them horizontally */
+  flex-wrap: wrap; /* Allows them to stack on mobile */
+  gap: 12px; /* Keeps the spacing even */
   margin-top: 48px;
   padding-top: 32px;
   border-top: 1px solid var(--border);
@@ -535,7 +536,7 @@ footer {
   gap: 6px;
   padding: 5px 12px;
   border-radius: 5px;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .72rem;
   font-weight: 600;
   letter-spacing: .06em;
