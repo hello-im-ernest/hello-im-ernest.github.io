@@ -36,7 +36,7 @@
   --text:        #e1e7ef; /* Polished Chrome (Bright, crisp, metallic) */
   --muted:       #a1aab5; /* Light Steel (Highly readable mid-tone) */
   --accent:      #218bff;
-  --accent-2:    #3fb950;
+  --accent-2:    #01407a;
   --accent-3:    #e3b341; /* Keeping your vibrant gold from the screenshot */
   --accent-4:    #ff7b72;
   --mono:        'Victor Mono';
@@ -221,24 +221,24 @@ nav .container {
   transform: translateY(-4px) !important;
 }
 .btn-primary {
-  background: var(--accent);
+  background: var(--accent-2);
   color: #fff;
   border: 1px solid var(--accent);
 }
 .btn-primary:hover {
-  background: var(--accent);
+  background: var(--accent-2);
   box-shadow: 0 0 18px rgba(33,139,255,.4);
   filter: brightness(1.1);
   border-color: var(--accent); /* Added for prominent blue border */
 }
 .btn-ghost {
   background: transparent;
-  color: var(--text);
+  color: var(--muted);
   border: 1px solid var(--border);
 }
 .btn-ghost:hover {
   border-color: var(--accent);
-  color: var(--text); /* Wording stays white/default instead of blue */
+  color: var(--muted); /* Wording stays white/default instead of blue */
   box-shadow: 0 0 12px rgba(33,139,255,.15);
   transform: translateY(-4px) !important;
 }
@@ -424,7 +424,7 @@ img[alt="Cybersecurity"] {
   border-radius: 4px;
   background: rgba(33, 139, 255, 0.05); /* Very faint blue tint */
   border: 1px solid var(--border);
-  color: var(--body);
+  color: var(--muted);
   font-weight: 500;
 }
 
