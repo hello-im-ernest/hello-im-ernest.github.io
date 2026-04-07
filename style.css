@@ -144,7 +144,7 @@ nav .container {
   align-items: center;
 }
 .hero-label {
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .78rem;
   color: var(--accent); /* Unified Blue */
   letter-spacing: .12em;
@@ -190,7 +190,7 @@ nav .container {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 6px 14px;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .78rem;
   color: var(--muted);
   margin-bottom: 40px;
@@ -210,7 +210,7 @@ nav .container {
   gap: 8px;
   padding: 10px 22px;
   border-radius: 6px;
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .82rem;
   letter-spacing: .04em;
   cursor: pointer;
@@ -380,7 +380,7 @@ h2 {
   font-size: 1.2rem;
 }
 .skill-name {
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .82rem;
   font-weight: 700;
   color: var(--accent-3); /* Metallic Gold */
@@ -393,7 +393,7 @@ h2 {
   gap: 6px;
 }
 .tag {
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .7rem;
   padding: 3px 9px;
   border-radius: 4px;
@@ -468,7 +468,7 @@ h2 {
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8); /* Gives a slight 'embossed' look to the metallic text */
 }
 .dir-sub {
-  font-family: var(--mono);
+  font-family: var(--body);
   font-size: .73rem;
   color: var(--muted);
 }
