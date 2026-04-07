@@ -30,14 +30,14 @@
 :root {
   --bg:          #0a0d11;
   --surface:     #0f1318;
-  --surface-2:   #161b22;
+  --surface-2:   #12161b; /* Deeper charcoal for better contrast */
   --border:      #21262d;
   --border-glow: rgba(33, 139, 255, 0.25);
-  --text:        #999B9B;
-  --muted:       #4a515c;
+  --text:        #f0f2f5; /* Polished Chrome */
+  --muted:       #8b949e; /* Brushed Steel */
   --accent:      #218bff;
   --accent-2:    #3fb950;
-  --accent-3:    #e3b341;
+  --accent-3:    #d4af37; /* Burnished Gold */
   --accent-4:    #ff7b72;
   --mono:        'Victor Mono';
   --display:     'Russo One';
@@ -159,7 +159,8 @@ nav .container {
   line-height: 1.08;
   letter-spacing: .03em;
   margin-bottom: 16px;
-  color: var(--accent-3); /* Added Gold */
+  color: var(--accent-3); /* Metallic Gold */
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.15); /* Subtle gold "glow" */
   opacity: 0;
   animation: fadeUp .6s .2s forwards;
 }
@@ -290,7 +291,8 @@ section { padding: 80px 0; }
 .section-line {
   flex: 1;
   height: 1px;
-  background: var(--border);
+  background: linear-gradient(90deg, var(--border), var(--muted), var(--border));
+  opacity: 0.3;
 }
 h2 {
   font-family: var(--display);
@@ -330,7 +332,7 @@ h2 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: var(--accent-3); /* Changed from var(--text) */
+  color: var(--accent-3); /* Metallic Gold */
 }
 .about-card p, .about-card li {
   font-size: .9rem;
@@ -382,7 +384,7 @@ h2 {
 .skill-name {
   font-family: var(--mono);
   font-size: .82rem;
-  color: var(--accent-3); /* Changed from var(--accent) */
+  color: var(--accent-3); /* Metallic Gold */
   letter-spacing: .04em;
 }
 .skill-tags {
@@ -453,7 +455,7 @@ h2 {
   font-family: var(--display);
   font-size: .95rem;
   font-weight: 600;
-  color: var(--accent-3); /* Changed from var(--accent) */
+  color: var(--accent-3); /* Metallic Gold */
   margin-bottom: 4px;
 }
 .dir-sub {
@@ -549,10 +551,10 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 16px 0;
-  opacity: .25;
+  opacity: .5;
   font-size: .75rem;
   font-family: var(--mono);
-  color: var(--accent);
+  color: var(--muted); /* Brushed Steel */
   letter-spacing: .2em;
 }
 
