@@ -311,7 +311,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 28px;
-  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 .about-card:hover {
   border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
@@ -359,7 +359,7 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px 22px;
-  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 .skill-card:hover {
   border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
@@ -414,7 +414,7 @@ h2 {
   padding: 8px 18px;
   font-size: .88rem;
   color: var(--muted);
-  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 .interest-pill:hover {
   border-color: var(--accent); /* Prominent Blue instead of the transparent glow */
@@ -436,7 +436,7 @@ h2 {
   border-radius: 10px;
   padding: 24px 20px;
   text-align: center;
-  transition: border-color .25s, box-shadow .25s, transform .25s;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
   text-decoration: none !important;
   display: block;
 }
