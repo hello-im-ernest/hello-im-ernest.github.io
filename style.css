@@ -56,7 +56,7 @@ body {
   overflow-x: hidden;
 }
 a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none; }
 
 /* ─── GRID BG ─────────────────────────────────────────── */
 body::before {
@@ -499,6 +499,18 @@ footer {
   text-align: right;
   color: var(--accent) !important; /* Unified Blue */
   font-weight: 500;
+}
+
+/* Keeps the footer brand link subtle and matches your UI */
+.footer-brand-link {
+  color: inherit; /* Takes the color from the parent text */
+  text-decoration: none; /* Removes the underline */
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-brand-link:hover {
+  opacity: 0.8;
+  color: var(--accent); /* Gives a soft blue hint on hover */
 }
 
 /* ─── BADGE STRIP ────────────────────────────────────── */
