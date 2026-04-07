@@ -424,7 +424,7 @@ img[alt="Cybersecurity"] {
   border-radius: 4px;
   background: rgba(33, 139, 255, 0.05); /* Very faint blue tint */
   border: 1px solid var(--border);
-  color: var(--text); /* Polished Chrome for readability */
+  color: var(--body);
   font-weight: 500;
 }
 
@@ -587,12 +587,12 @@ footer {
   transform: scale(1.1);
 }  
 
-.badge-python   { border-color: #3572A5; color: #fff; background: rgba(53, 114, 165, 0.1); }
-.badge-linux    { border-color: #e8a202; color: #fff; background: rgba(232, 162, 2, 0.1); }
-.badge-cybersec { border-color: var(--accent); color: #fff; background: rgba(33, 139, 255, 0.1); }
-.badge-js       { border-color: #f0db4f; color: #fff; background: rgba(240, 219, 79, 0.1); }
-.badge-netsec   { border-color: #16a34a; color: #fff; background: rgba(22, 163, 74, 0.1); }
-.badge-bash     { border-color: var(--muted); color: #fff; background: rgba(161, 170, 181, 0.1); }
+.badge-python   { border-color: #3572A5; color: var(--muted); background: rgba(53, 114, 165, 0.1); }
+.badge-linux    { border-color: #e8a202; color: var(--muted); background: rgba(232, 162, 2, 0.1); }
+.badge-cybersec { border-color: var(--accent); color: var(--muted); background: rgba(33, 139, 255, 0.1); }
+.badge-js       { border-color: #f0db4f; color: var(--muted); background: rgba(240, 219, 79, 0.1); }
+.badge-netsec   { border-color: #16a34a; color: var(--muted); background: rgba(22, 163, 74, 0.1); }
+.badge-bash     { border-color: var(--muted); color: var(--muted); background: rgba(161, 170, 181, 0.1); }
 .badge-linux img {
   filter: invert(1) brightness(2.0) drop-shadow(0 0 5px #e8a202) !important;
 }
