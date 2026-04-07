@@ -113,6 +113,7 @@ nav .container {
   color: var(--accent); /* Unified Blue */
   letter-spacing: .05em;
 }
+.nav-logo:hover { opacity: 0.8; color: var(--accent); } /* Gives a soft blue hint on hover */
 .nav-logo span { color: var(--muted); }
 .nav-links {
   display: flex;
