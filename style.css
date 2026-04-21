@@ -669,6 +669,8 @@ footer {
   }
 
   .hero-actions { justify-content: center; }
+
+  .about-grid { grid-template-columns: 1fr; }
   
   .footer-container { 
     flex-direction: column; 
