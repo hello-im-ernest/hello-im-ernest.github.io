@@ -653,6 +653,7 @@ footer {
   #hero .container {
     grid-template-columns: 1fr;
     text-align: center;
+    align-self: center;
     gap: 32px; /* Reduced gap for mobile */
   }
   /* 1. Show the photo wrap instead of display: none */
